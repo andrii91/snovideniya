@@ -1,0 +1,1006 @@
+@import 'variables';
+
+*{
+  outline: none;
+}
+a:focus, a:hover, input:focus, input:hover {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  @import 'MediaQueries/main';
+  overflow-x: hidden;
+}
+
+.nav {
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: .3s;
+  &.fixed {
+    background: #fff;
+    padding: 10px 0;
+  }
+}
+
+.logo {
+  display: inline-block;
+  max-width: 59px;
+  img {
+    width: 100%;
+  }
+}
+
+.nav-container {
+  max-width: 770px;
+  margin-left: auto;
+      display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    a {
+      display: block;
+      font-family: Proba Pro;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 21px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #000000;
+      transition: .3s;
+      &:hover {
+        color: #9A9F45;
+      }
+    }
+  }
+}
+
+.call-btn {
+  font-family: Proba Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 21px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+
+color: #000000;
+display: inline-block;
+  vertical-align: middle;
+  transition: .3s;
+  border: 1px solid #9A9F45;
+  padding: 10px 20px 7px;
+  &:hover {
+    background: #9A9F45;
+    color: #fff;
+  }
+}
+
+.head {
+  min-height: 765px;
+//  height: 100vh;
+  background: url('../images/bg.jpg') no-repeat center top;
+  background-size: 1920px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 94px;
+  padding-bottom: 60px;
+}
+
+.head-item {
+  .info {
+    display: block;
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #9A9F45;
+    padding-left: 23px;
+    position: relative;
+    margin-bottom: 34px;
+    &:before {
+      content: "";
+      width:  2px;
+      height: 100%;
+      background: #9A9F45;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+  h1 {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 76px;
+    color: #000000;
+    margin-bottom: 23px;
+  }
+  p {
+    max-width: 325px;
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: #757575;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+.order-btn {
+  &[disabled] {
+    background: #ccc;
+    box-shadow: 0 0;
+    cursor: auto;
+    &:hover {
+      transform: none;
+      background: #ccc;
+      box-shadow: 0 0;
+      color: #FFE6D9;
+    }
+  }
+  cursor: pointer;
+  font-family: Proba Pro;
+  border: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFE6D9;
+  background: #242424;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  padding: 15px 18px 14px;
+  transition: .3s;
+  display: inline-block;
+  &:hover, &:focus {
+    color: #000000;
+    background: #FFE6D9;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    transform: translateY(5%);
+  }
+}
+
+.date {
+  max-width: 134px;
+  margin-left: auto;
+  font-family: Proba Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 270px;
+  span{
+    display: block;
+    color: #9A9F45;
+    margin-top: 7px;
+    font-weight: normal;
+
+  }
+}
+
+.play-btn {
+  max-width: 150px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-bottom: 0;
+  span {
+      font-family: Proba Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+  margin-bottom: 9px;
+    display: block;
+  }
+  &:hover {
+    svg {
+      transform: scale(1.1);
+    }
+  }
+  svg {
+    transition: .3s;
+  }
+}
+
+.results {
+  padding: 200px 0 100px;
+}
+
+.results-img {
+  img {
+    max-width: 437px;
+  }
+}
+
+.h2-title {
+  font-family: Proba Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 50px;
+  color: #000000;
+  margin-bottom: 57px;
+}
+
+.results-item {
+  .img {
+    margin-bottom: 23px;
+  }
+  .title {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 19px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  p {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 19px;
+    color: #757575;
+    margin-bottom: 0;
+  }
+  margin-bottom: 36px;
+}
+
+.mt53 {
+  margin-top: 53px;
+}
+
+.programs {
+  padding: 100px 0 155px;
+  .h2-title {
+    text-align: center;
+  }
+}
+
+.programs-item {
+  .lesson {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #9A9F45;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  .duration {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #AAAAAA;
+    margin-bottom: 26px;
+  }
+  
+  ul {
+   list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      font-family: Proba Pro;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 19px;
+      color: #757575;
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 15px;
+      &:before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        background: #9A9F45;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: 0;
+      }
+    }
+  }
+}
+
+.speaker {
+  background: #FFFAF8;
+  padding: 200px 0 200px;
+  .h2-title {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 76px;
+    color: #000000;
+    margin-bottom: 58px;
+  }
+  .h2-subtitle {
+    padding-left: 40px;
+    margin-left: 30px;
+    position: relative;
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #757575;
+    max-width: 320px;
+    
+    &:before {
+      content: "";
+      width: 2px;
+      height: calc(100% - 5px);
+      background: #9A9F45;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+
+    b {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 1;
+      color: #000000;
+      margin-bottom: 14px;
+      display: block;
+
+    }
+    margin-bottom: 55px;
+  }
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.speaker-item {
+  max-width: 347px;
+  .title {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #9A9F45;
+    margin-bottom: 11px;
+  }
+  p {
+    margin-bottom: 0;
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #757575;
+    margin-bottom: 0;
+  }
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.speaker-img {
+  margin-bottom: 42px;
+  img {
+    width: 100%;
+    max-width: 470px;
+  }
+}
+
+.speaker-blq {
+  padding-left: 30px;
+  font-family: Proba Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9A9F45;
+  position: relative;
+  &:before {
+      content: "";
+      width: 2px;
+      height: calc(100% - 5px);
+      background: #9A9F45;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+}
+
+.reviews {
+  padding: 200px 0 100px;
+  .h2-title {
+    margin-bottom: 79px;
+  }
+}
+
+.reviews-container {
+  position: relative;
+}
+
+.reviews-img {
+  img {
+    max-width: 470px;
+    width: 100%;
+  }
+}
+
+.reviews-count_sl {
+  font-family: Proba Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 50px;
+  color: #9A9F45;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  #all {
+    color: #B5B5B5;
+    font-size: 16px;
+        line-height: 57px;
+    margin-left: 5px;
+  }
+
+}
+
+.reviews-slider {
+  padding-bottom: 67px;
+//  padding-bottom: 40px;
+  position: relative;
+  padding-left: 101px;
+  
+}
+.slick-dots {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  li {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 50px;
+    color: #D2D2D2;
+    margin-right: 10px;
+    &.slick-active {
+    color: #9A9F45;
+    }
+  }
+}
+.slick-arrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  &.slick-next  {
+    right: 0;
+  }
+  &.slick-prev {
+    right: 60px;
+  }
+  &:hover {
+    svg {
+      line {
+        stroke: #9A9F45;
+      }
+    }
+  }
+  svg {
+    line {
+      transition: .3s;
+    }
+  }
+}
+
+.reviews-item {
+  max-width: 426px;
+  .title {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+    margin-bottom: 13px;
+  }
+  p {
+    margin-bottom: 0;
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #757575;
+  }
+  margin-bottom: 29px;
+  &:first-child {
+    margin-bottom: 50px;
+    p {
+      font-size: 20px;
+    line-height: 24px;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+}
+
+.price {
+  padding: 100px 0 200px;
+  .h2-title {
+    text-align: center;
+  }
+}
+
+.price-item {
+  background: #FFFAF8;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px;
+  text-align: center;
+  .title {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 32px;
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 26px;
+    text-align: left;
+    min-height: 148px;
+    li {
+      font-family: Proba Pro;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: #757575;
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 15px;
+      b {
+      font-weight: 600;
+        
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        background: #9A9F45;
+        border-radius: 50%;
+        position: absolute;
+        top: 6px;
+        left: 0;
+      }
+    }
+  }
+  &.full {
+    background: #FCFDF3;
+    .title {
+      margin-bottom: 17px;
+      span {
+        display: block;
+        font-family: Proba Pro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 18px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #9A9F45;
+      }
+    }
+  }
+}
+
+.price-summ {
+  width: 108px;
+margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 26px;
+  text-align: left;
+}
+
+.top-text {
+  font-family: Proba Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 18px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9A9F45;
+  margin-bottom: 10px;
+}
+
+.bottom-text {
+  font-family: Proba Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.footer {
+  padding: 53px 0 49px;
+  background: #FFF5F0;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: block;
+    margin-bottom: 16px;
+    a {
+      display: block;
+      font-family: Proba Pro;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #000000;
+      transition: .3s;
+      &:hover {
+        color: #9A9F45;
+      }
+    }
+      &:last-child {
+        margin-bottom: 0;
+      }
+  }
+}
+
+.contact-item {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  
+  svg {
+    display: inline-block;
+  }
+  a {
+    display: inline-block;
+
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #878787;
+    transition: .3s;
+    width: calc(100% - 35px);
+    float: right;
+
+    &:hover {
+      color: #9A9F45;
+    }
+    
+    &.social {
+      width: inherit;
+      float: none;
+      margin-right: 10px;
+      
+      svg,path {
+        transition: .3s;
+      }
+      
+      &:hover {
+        svg {
+          path {
+            fill: #9A9F45;
+          }
+        }
+      }
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+  }
+  margin-bottom: 30px;
+}
+
+.footer-item {
+  float: right;
+}
+
+.copy {
+  max-width: 159px;
+  font-family: Proba Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #878787;
+  
+    margin-top: -40px;
+}
+
+.footer_bottom {
+  background: #0E0E0E;
+  padding: 20px 0;
+}
+
+.footer_bottom-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    a {
+      display: block;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.1em;
+      color: #65666A;
+      transition: .3s;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.logo-rezart {
+  float: right;
+  svg path{
+     transition: .3s;
+  }
+  &:hover {
+    svg path{
+      fill: #9A9F45;
+  }
+  }
+}
+
+.modal {
+  display: none;
+  background: #F9F9F9;
+  border-radius: 5px;
+  padding: 100px;
+  max-width: 570px;
+  width: 100%;
+  .title {
+    text-align: center;
+    margin-bottom: 56px;
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 50px;
+    color: #000000;
+
+  }
+
+  &.large {
+    max-width: 768px;
+    padding: 5vw;
+  }
+}
+
+.form {
+  .label {
+    position: relative;
+  }
+    input {
+    display: block;
+    width: 100%;
+    border: 0;
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
+    border-bottom: 1px solid #BABABA;
+    background: 0 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 45px;
+    border-radius: 0;
+    position: relative;
+    z-index: 4;
+    &.agree {
+      display: none;
+      &:checked {
+        + label {
+          &:before {
+            background-color: #9A9F45;
+             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+          }
+          /*&:after {
+            opacity: 1;
+          }*/
+        }
+      }
+    }
+    &:focus, &:hover {
+      border-bottom-color: #9A9F45;
+      +.label-text  {
+        color: #9A9F45;
+        top: -13px;
+        z-index: 0;
+      }
+    }
+    &:placeholder {
+      color: #000000;
+    }
+
+  }
+    label {
+      margin-bottom: 30px;
+      display: block;
+      width: 100%;
+      vertical-align: top;
+      cursor: pointer;
+      padding-left: 25px;
+      position: relative;
+/*      &:after {
+        content: "";
+        height: 7px;
+        width: 7px;
+        background: #9A9F45;
+        position: absolute;
+        top: 7px;
+        left: 4px;
+        opacity: 0;
+      }*/
+      &:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-radius: 2px;
+        border: 1px solid #9A9F45;
+        position: absolute;
+        top: 3px;
+        left: 0;
+      }
+    }
+  .label-text {
+    transition: .4s;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    z-index: 1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.success {
+  min-height: 100vh;
+    display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.success-logo {
+  margin-bottom: 105px;
+  .logo {
+      max-width: 78px;
+  }
+}
+
+.success-item {
+  h1 {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 76px;
+    color: #000000;
+    margin: 0 0 30px;
+  }
+  p {
+    font-family: Proba Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+    color: #757575;
+    margin-bottom: 88px;
+  }
+}
+
+.xs-block {
+  display: none;
+}

@@ -1,0 +1,26 @@
+@import '../../mq';
+
+@media #{$tabletPortrait} {
+  @import '../mobile';
+
+  & {
+    .container {
+      max-width: 480px;
+    }
+
+    .head {
+      background-size: 160vw;
+
+      .order-btn {
+        margin-bottom: 20vw;
+      }
+
+    }
+    
+    .footer {
+      .container {
+        max-width: 375px;
+      }
+    }
+  }
+}

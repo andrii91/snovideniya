@@ -1,0 +1,149 @@
+@import '../../mq';
+
+@media #{$tabletLandscape} {
+  @import '../desktop';
+
+  & {
+    .xs-first {
+      -ms-flex-order: inherit;
+      order: inherit;
+    }
+
+    .head {
+      height: inherit;
+      padding-top: 105px;
+      background: url(../images/bg.jpg) center no-repeat;
+      background-size: cover;
+      min-height: inherit;
+      padding-bottom: 0;
+
+      .order-btn {
+        margin-bottom: 0;
+      }
+    }
+
+    .nav {
+      background: 0 0;
+
+    }
+
+    #menu {
+      display: flex;
+    }
+
+    #menu {
+      margin-top: 0px;
+      text-align: left;
+
+      .menu {
+        display: block;
+
+        li {
+          display: inline-block;
+          margin-bottom: 0px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    #nav-icon {
+      display: none;
+    }
+
+    .footer {
+      text-align: left;
+    }
+
+    .contact-item {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      display: inline-block;
+      max-width: 192px;
+      width: 100%;
+      text-align: left;
+
+      &.xs-center {
+        text-align: left;
+      }
+    }
+
+    .nav-container {
+      max-width: 620px;
+    }
+
+    .footer-menu {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .xs-full {
+      max-width: 100%;
+
+      a {
+        max-width: calc(100% - 30px);
+      }
+    }
+
+    .copy {
+      margin-top: 0px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-item,
+    .logo-rezart {
+      text-align: center;
+      float: right;
+    }
+
+    .footer_bottom {
+      text-align: left;
+
+      .footer_bottom-menu {
+        margin-bottom: 0px;
+
+        li {
+          display: inline-block;
+          margin-right: 10px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .footer-item,
+    .copy {
+      margin-top: 30px;
+    }
+
+  }
+
+  .footer-item {
+    margin-top: 0px;
+  }
+
+  .copy {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .price-item {
+    padding: 60px 30px;
+  }
+
+  .xs-none {
+    display: block;
+  }
+
+  .xs-block {
+    display: none;
+  }
+
+  .container,
+  .footer .container {
+    max-width: 100%;
+  }
+
+  .speaker .h2-subtitle {
+    margin-bottom: 115px;
+  }
+}

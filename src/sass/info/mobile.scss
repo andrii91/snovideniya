@@ -1,0 +1,324 @@
+& {
+
+  header,
+  footer,
+  main {
+    overflow: hidden;
+  }
+
+  .nav {
+    background: #fff;
+  }
+
+  #nav-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    position: relative;
+    float: right;
+
+    &:after {
+      content: "";
+      width: 13px;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:before {
+      content: "";
+      width: 13px;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    span {
+      width: 13px;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  #menu {
+    display: none;
+    margin-top: 30px;
+    text-align: center;
+
+    .menu {
+      display: block;
+
+      li {
+        display: block;
+        margin-bottom: 30px;
+        margin-right: 0;
+      }
+    }
+  }
+
+
+  .logo {
+    max-width: 40px;
+  }
+
+  .head-item h1 {
+    font-size: 50px;
+    line-height: 1;
+  }
+
+  .xs-block {
+    display: block;
+  }
+
+  .xs-none {
+    display: none;
+  }
+
+  .head {
+    height: inherit;
+    padding-top: 105px;
+    background: url(../images/bg.png) 72% 108% no-repeat;
+    background-size: 255vw;
+    min-height: inherit;
+    padding-bottom: 0;
+    background-color: #faefeb;
+
+    .order-btn {
+      margin-bottom: 35vw;
+    }
+  }
+
+  .head-item p {
+    margin-bottom: 35px;
+  }
+
+  .date {
+    margin-bottom: 20vw;
+
+    br {
+      display: block;
+    }
+  }
+
+  .xs-center {
+    text-align: center;
+  }
+
+  .play-btn {
+    max-width: 134px;
+    margin-bottom: 5vw;
+
+    br {
+      display: block;
+    }
+  }
+
+  .fancybox-slide {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .results {
+    padding: 100px 0 50px;
+  }
+
+  .xs-first {
+    -ms-flex-order: -1;
+    order: -1;
+  }
+
+  .mob-slider {
+    padding-bottom: 20px;
+    position: relative;
+
+  }
+
+  .slick-dots {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  mb0 .results-item {}
+
+  .results-img {
+    margin-bottom: 40px;
+    height: 285px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
+    img {
+
+      width: 100%;
+      transform: translateY(-20%);
+
+    }
+  }
+
+  .slick-dots li {
+    line-height: 1;
+  }
+
+  .mt53 {
+    margin-top: 0;
+  }
+
+  .h2-title {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 30px !important;
+  }
+
+  .programs {
+    padding: 50px 0;
+  }
+
+  .speaker {
+    padding: 100px 0;
+  }
+
+  br {
+    display: none;
+  }
+
+  .reviews {
+    padding: 100px 0 50px;
+  }
+
+  .reviews-img {
+    margin-bottom: 30px;
+  }
+
+  .reviews-slider {
+    padding-left: 65px;
+  }
+
+  .reviews-count_sl {
+    font-size: 25px;
+  }
+
+  .price {
+    padding: 50px 0 100px;
+  }
+
+  .price-item {
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .contact-item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    max-width: 192px;
+    width: 100%;
+    text-align: left;
+
+    &.xs-center {
+      text-align: center;
+    }
+  }
+
+  .footer-menu {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .xs-full {
+    max-width: 240px;
+
+    a {
+      max-width: calc(100% - 30px);
+    }
+  }
+
+  .copy {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-item,
+  .logo-rezart {
+    text-align: center;
+    float: none;
+  }
+
+  .footer_bottom {
+    text-align: center;
+
+    .footer_bottom-menu {
+      margin-bottom: 50px;
+
+      li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .success-item {
+    h1 {
+      font-size: 70px;
+      line-height: 1;
+    }
+
+  }
+
+  .modal {
+    padding: 50px 40px;
+  }
+
+  .modal .title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .speaker .h2-subtitle {
+    margin-bottom: 35px;
+        padding-left: 25px;
+    margin-left: 15px;
+  }
+
+  .speaker-blq {
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .speaker-img {
+    margin-bottom: 20px;
+  }
+  .reviews-slider {
+    padding-left: 0;
+    padding-bottom: 40px;
+    
+  }
+  .reviews-count_sl {
+    display: none;
+  }
+  .social svg {
+    height: 35px;
+    width: 35px;
+  }
+}
